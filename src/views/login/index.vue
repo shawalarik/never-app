@@ -2,7 +2,10 @@
 import { useUserStoreWithOut } from '~/stores/modules/user';
 const userStore = useUserStoreWithOut();
 const clickLogin = () => {
-    let userInfoParam = '已登录';
+    let userInfoParam = {
+        userId: '999',
+        userName: 'admin'
+    };
     let useInfo = userStore.login(userInfoParam);
     console.log('这是个啥？', useInfo)
 }

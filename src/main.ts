@@ -1,10 +1,12 @@
 import './assets/main.css'
+import 'nprogress/nprogress.css'
 
 import router, { setupRouter } from '~/router'
 
 import App from '~/App.vue'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { setupRouterGuard } from './router/guard'
 import { setupStore } from '~/stores'
 
 async function bootstrap() {
@@ -15,6 +17,7 @@ async function bootstrap() {
     // app.use(router)
     setupRouter(app);
 
+    setupRouterGuard(router);
 
     app.mount('#app');
 }
