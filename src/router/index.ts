@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, createWebHistory, type Router, type RouteRecordRaw } from 'vue-router'
 
-import HomeView from '../views/HomeView.vue';
+import DefaultLayout from '~/layouts/default/index.vue';
 import Login from "~/views/login/index.vue"
 import NProgress from 'nprogress';
 import { whiteList } from './whiteList';
@@ -14,13 +14,17 @@ export const constantRoutes: RouteRecordRaw[] = [
     name: 'login',
     component: Login,
     meta: {
-      hidden: true
+      hidden: true,
+      title: 'Login'
     }
   },
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'Layout',
+    component: DefaultLayout,
+    meta: {
+      title: 'Layout'
+    }
   },
   {
     path: '/about',
@@ -28,7 +32,10 @@ export const constantRoutes: RouteRecordRaw[] = [
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('../views/AboutView.vue')
+    component: () => import('../views/AboutView.vue'),
+    meta: {
+      title: '关于你的一切'
+    }
   }
 ];
 

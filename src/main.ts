@@ -1,5 +1,6 @@
 import './assets/main.css'
 import 'nprogress/nprogress.css'
+import 'ant-design-vue/dist/antd.css';
 
 import router, { setupRouter } from '~/router'
 

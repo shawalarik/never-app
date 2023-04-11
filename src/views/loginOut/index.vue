@@ -1,4 +1,5 @@
-<script setup lang="ts">import { useUserStoreWithOut } from '~/stores/modules/user';
+<script setup lang="ts">
+import { useUserStoreWithOut } from '~/stores/modules/user';
 
 const userStore = useUserStoreWithOut();
 const clickLoginOut = () => {
@@ -7,6 +8,5 @@ const clickLoginOut = () => {
 }
 </script>
 <template>
-    <span>这是退出登录的地方</span>
     <button style="cursor: pointer" @click="clickLoginOut()">点击我退出</button>
 </template>

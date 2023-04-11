@@ -1,6 +1,7 @@
 import type { RouteRecordRaw, Router } from "vue-router"
 
 import NProgress from 'nprogress';
+import getPageTitle from "~/utils/GetPageTitle";
 import { useUserStoreWithOut } from "~/stores/modules/user";
 import { whiteList } from "../whiteList";
 
@@ -47,7 +48,10 @@ function createPermissionGuard(router: Router) {
     return true
   })
 
-  router.afterEach(() => {
+  router.afterEach((to) => {
+    if (to.meta.title) {
+      document.title = getPageTitle(to.meta.title || '');
+    }
     NProgress.done()
   })
 }
