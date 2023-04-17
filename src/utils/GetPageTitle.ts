@@ -1,4 +1,4 @@
-const GLOB_APP_TITLE = 'Alarik App'
+export const GLOB_APP_TITLE = 'Alarik App'
 
 export default function getPageTitle(pageTitle: string) {
   if (pageTitle) {

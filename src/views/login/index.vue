@@ -13,4 +13,8 @@ const clickLogin = () => {
 <template>
     <span>这是登录页</span>
     <p style="cursor: pointer" @click="clickLogin()">点击我登录</p>
+
+    <div>
+        
+    </div>
 </template>
