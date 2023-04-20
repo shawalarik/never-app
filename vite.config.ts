@@ -10,5 +10,14 @@ export default defineConfig({
     alias: {
       '~': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        // 全局添加less
+        additionalData: `@import '~/assets/styles/var.less';`,
+        javascriptEnabled: true,
+      },
+    },
+  },
 })

@@ -10,17 +10,25 @@
     >
         <p>遍历等...</p>
         <p>Some contents...</p>
+        <Divider>这是测试</Divider>
+        <ThemeSystemPicker />
     </Drawer>
 </template>
 
 <script lang="ts" setup>
-import { Button, Drawer } from 'ant-design-vue';
+
+import { Button, Drawer, Divider } from 'ant-design-vue';
 import { ref } from 'vue';
+import ThemeSystemPicker from '~/layouts/setting/components/ThemeSystemPicker.vue';
+
 const visible = ref<boolean>(false);
+
 const afterVisibleChange = (bool: boolean) => {
     console.log('visible的值', bool);
 };
+
 const showDrawer = () => {
     visible.value = true;
 };
+
 </script>
