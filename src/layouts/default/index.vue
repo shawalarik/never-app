@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import loginOut from "~/views/loginOut/index.vue"
+import SettingDrawer from '~/layouts/setting/SettingDrawer.vue';
 import { Layout, LayoutSider, Menu, MenuItem, LayoutHeader, LayoutContent } from 'ant-design-vue';
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue';
 import { reactive, ref } from "vue";
@@ -46,6 +47,7 @@ const logoTitle = GLOB_APP_TITLE;
         <LayoutContent :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
             asasdasd
         </LayoutContent>
+        <SettingDrawer></SettingDrawer>
         <loginOut></loginOut>
     </Layout>
 </template>
