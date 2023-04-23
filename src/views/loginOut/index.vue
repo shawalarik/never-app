@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import { Button } from 'ant-design-vue';
 import { useUserStoreWithOut } from '~/stores/modules/user';
 
 const userStore = useUserStoreWithOut();
 const clickLoginOut = () => {
-    let userInfoParam = '已退出登录';
     userStore.resetState();
 }
 </script>
 <template>
-    <button style="cursor: pointer" @click="clickLoginOut()">点击我退出</button>
+    <Button style="cursor: pointer" type="primary" @click="clickLoginOut">点击我退出</Button>
 </template>

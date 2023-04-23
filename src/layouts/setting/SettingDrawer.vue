@@ -8,9 +8,7 @@
         placement="right"
         @after-visible-change="afterVisibleChange"
     >
-        <p>遍历等...</p>
-        <p>Some contents...</p>
-        <Divider>这是测试</Divider>
+        <Divider>系统颜色设置</Divider>
         <ThemeSystemPicker />
     </Drawer>
 </template>
@@ -24,7 +22,6 @@ import ThemeSystemPicker from '~/layouts/setting/components/ThemeSystemPicker.vu
 const visible = ref<boolean>(false);
 
 const afterVisibleChange = (bool: boolean) => {
-    console.log('visible的值', bool);
 };
 
 const showDrawer = () => {

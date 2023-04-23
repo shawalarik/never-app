@@ -6,7 +6,7 @@ import router, { setupRouter } from '~/router'
 
 import App from '~/App.vue'
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { initAppConfigStore } from './logics/initAppConfig';
 import { setupRouterGuard } from './router/guard'
 import { setupStore } from '~/stores'
 
@@ -20,6 +20,11 @@ async function bootstrap() {
 
     setupRouterGuard(router);
 
+    /**
+     * 初始化内部系统配置
+     */
+    initAppConfigStore();
+    
     app.mount('#app');
 }
 

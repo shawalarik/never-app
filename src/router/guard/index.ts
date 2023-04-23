@@ -1,6 +1,5 @@
-import type { RouteRecordRaw, Router } from "vue-router"
-
 import NProgress from 'nprogress';
+import type { Router } from "vue-router"
 import getPageTitle from "~/utils/GetPageTitle";
 import { useUserStoreWithOut } from "~/stores/modules/user";
 import { whiteList } from "../whiteList";
