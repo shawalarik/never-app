@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Button } from 'ant-design-vue';
+import { Button } from "ant-design-vue"
 import { useUserStoreWithOut } from '~/stores/modules/user';
 
 const userStore = useUserStoreWithOut();
 const clickLoginOut = () => {
-    userStore.resetState();
+    userStore.confirmLoginOut();
 }
 </script>
 <template>

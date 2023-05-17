@@ -1,5 +1,7 @@
 import { ThemeEnum } from "~/enums/appEnum";
 
+export const prefixCls = 'alarik';
+
 /**
  * 系统（菜单）主题
  */

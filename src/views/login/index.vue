@@ -11,10 +11,11 @@ const clickLogin = () => {
 }
 </script>
 <template>
-    <span>这是登录页</span>
-    <p style="cursor: pointer" @click="clickLogin()">点击我登录</p>
+    <p style="cursor: pointer" @click="clickLogin()">login</p>
 
     <div>
         
     </div>
+    <!-- <div :class="prefixCls" class="relative w-full h-full px-4"> -->
+    <!-- </div> -->
 </template>

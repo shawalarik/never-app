@@ -145,6 +145,17 @@ export const useUserStore = defineStore({
             this.sessionTimeout = false;
             router.push('/login')
         },
+        confirmLoginOut() {
+            this.resetState();
+            // createConfirm({
+            //     iconType: 'warning',
+            //     title: () => '测试',
+            //     content: () => '测试1',
+            //     onOk: async () => {
+            //       await this.resetState();
+            //     },
+            // });
+        },
         /**
          * 可异步操作
          */

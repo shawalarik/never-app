@@ -1,3 +1,5 @@
+import type { App, FunctionalComponent } from "vue";
+
 import { isObject } from "./is";
 const docEle = document.documentElement;
 /**
@@ -21,3 +23,14 @@ export function deepMerge<T = any>(src: any = {}, target: any = {}): T {
 export function setCssVar(prop: string, val: any, dom = docEle) {
   dom.style.setProperty(prop, val);
 }
+
+export const withInstall = <T>(component: FunctionalComponent<any, any>, alias?: string) => {
+  const comp = component as any;
+  comp.install = (app: App) => {
+    app.component(comp.name || comp.displayName, component);
+    if (alias) {
+      app.config.globalProperties[alias] = component;
+    }
+  };
+  return component as T & Plugin;
+};
